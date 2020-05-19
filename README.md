@@ -1,4 +1,4 @@
-# vue_user
+# vue_mobile_music
 
 ## Project setup
 ```

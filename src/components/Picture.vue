@@ -20,7 +20,7 @@
         <div class="myicon">
             <span class="iconfont iconsub_account" @click="toMusic"></span>
             <span class="iconfont iconstar"></span>
-            <span class="iconfont iconcart_empty"></span>
+            <span class="iconfont iconcart_empty" @click="buyMusic"></span>
             <span class="iconfont iconlike_filled"></span>
         </div>
         <ul>
@@ -56,6 +56,9 @@
             },
             toMusic(){
                 this.$router.replace('/list')
+            },
+            buyMusic(){
+                this.$router.replace('/music?mid=865040706')
             }
         },
         mounted() {

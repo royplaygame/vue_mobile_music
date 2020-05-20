@@ -6,6 +6,7 @@ import Main from "../components/Main";
 import Music from "../components/Music";
 import List from "../components/List";
 import Profile from "../components/Profile";
+import PayDetail from "../components/PayDetail";
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,7 @@ export default new VueRouter({
         {path: '/music', component: Music},
         {path: '/list', component: List},
         {path: '/profile', component: Profile},
+        {path: '/paydetail', component: PayDetail},
         {path: '/', redirect: '/login'},
     ]
 })

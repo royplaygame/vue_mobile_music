@@ -9,11 +9,15 @@
         <div class="myicon"><span class="iconfont icondownload"></span> <span
                 class="iconfont iconcart_empty"></span><span class="iconfont iconstar"></span></div>
         <audio :src="musicUrl" controls autoplay></audio>
+        <br>
+        <br>
+        <mt-button type="primary" size="large" @click="share">分享</mt-button>
     </div>
 </template>
 
 <script>
     import axios from 'axios'
+    import {MessageBox, Toast} from 'mint-ui'
 
     export default {
         name: "Music",
@@ -39,7 +43,7 @@
             },
             getMusic() {
                 this.musicName = this.$route.query.name;
-                //console.log(this.$route.query.name)
+                //console.log(this.$route.query.mid)
                 const url = "http://musicapi.leanapp.cn/music/url?id=" + this.$route.query.mid;
                 axios.get(url).then((res) => {
                     //console.log(res.data.data)
@@ -60,6 +64,14 @@
                     }
                 }, (err) => {
                     console.log(err)
+                })
+            },
+            share() {
+                MessageBox.confirm("您确定要分享这首歌曲吗？").then(() => {
+                    Toast({
+                        message: "分享成功",
+                        position: 'bottom'
+                    })
                 })
             }
         },

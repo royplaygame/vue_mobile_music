@@ -1,6 +1,7 @@
 <template>
     <div>
         <mt-header fixed title="用户登录"></mt-header>
+        <img src="../assets/list03.jpg">
         <div class="header">
             <mt-field label="用户名称: " placeholder="请输入用户名称" v-model="username"></mt-field>
             <mt-field label="用户密码: " placeholder="请输入用户密码" type="password" v-model="password"></mt-field>
@@ -52,7 +53,12 @@
 
 <style scoped>
     .header {
-        margin-top: 100px;
-        padding: 20px;
+        margin-top: 30px;
+        padding: 10px;
+    }
+
+    div img {
+        margin-top: 30px;
+        border-radius: 50%;
     }
 </style>

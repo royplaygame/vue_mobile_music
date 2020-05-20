@@ -35,7 +35,7 @@
                 }
             },
             backTo() {
-                this.$router.replace("/main")
+                this.$router.replace("/list")
             },
             getMusic() {
                 this.musicName = this.$route.query.name;

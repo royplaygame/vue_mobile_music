@@ -42,7 +42,7 @@
                 musics: [],
                 users: ['张三丰', '李家驹', '王安石', '赵无极', '田伯光', '孙悟空', '钱钟书', '鲁智深', '东风破'],
                 loading: false,
-                selected: 1
+                selected: 2
             }
         },
         methods: {
@@ -63,7 +63,7 @@
             getMusicList() {
                 const url = "https://autumnfish.cn/search?keywords=霍尊";
                 axios.get(url).then((res) => {
-                    console.log(res.data.result.songs)
+                    //console.log(res.data.result.songs)
                     this.musics=res.data.result.songs
                 }, (err) => {
                     console.log(err)

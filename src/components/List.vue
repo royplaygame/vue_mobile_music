@@ -42,12 +42,12 @@
                 musics: [],
                 users: ['张三丰', '李家驹', '王安石', '赵无极', '田伯光', '孙悟空', '钱钟书', '鲁智深', '东风破'],
                 loading: false,
-                selected: 2
+                selected: "2"
             }
         },
         methods: {
             backTo() {
-                this.$router.replace("/login")
+                this.$router.replace("/")
             },
             delGame() {
                 MessageBox.confirm('您确定要删除这条记录吗?').then(() => {
